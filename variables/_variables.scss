@@ -1,9 +1,3 @@
-@use './helpers/mixnes' as *;
-
-body{
-    background-color: cadetblue;
-}
-
 $colors:(
     'primary':blue,
     'secondary':green,
@@ -20,14 +14,6 @@ $colors:(
     'Success': olive,
     'Warning': orange,
 );
-
-@each $name ,$color in $colors{
-    .bg-#{$name}{
-        background-color:$color;
-        color:$color;
-    }
-}
-
 $MP:(
     'ml':'margin-left',
     'mr':'margin-right',
@@ -76,19 +62,3 @@ $sizes:(
     'sm':10px,
     'xs':5px,
 );
-
-
-@each $direction, $val in $MP {
-    @each $type, $value in $sizes {
-      .#{$direction}-#{$type} {
-        @if type-of($val) == 'list' {
-          @each $property in $val {
-            #{$property}: $value;
-          }
-        } @else {
-          #{$val}: $value;
-        }
-      }
-    }
-  }
-   

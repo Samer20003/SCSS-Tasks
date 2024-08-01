@@ -1,0 +1,32 @@
+@use './helpers/mixnes' as *;
+@use './variables/variables' as *;
+body{
+    background-color: cadetblue;
+}
+
+
+
+@each $name ,$color in $colors{
+    .bg-#{$name}{
+        background-color:$color;
+        color:$color;
+    }
+}
+
+
+
+
+@each $direction, $val in $MP {
+    @each $type, $value in $sizes {
+      .#{$direction}-#{$type} {
+        @if type-of($val) == 'list' {
+          @each $property in $val {
+            #{$property}: $value;
+          }
+        } @else {
+          #{$val}: $value;
+        }
+      }
+    }
+  }
+   
