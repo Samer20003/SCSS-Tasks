@@ -30,3 +30,26 @@ body{
     }
   }
    
+  @include breakpoint-max($screen, 'sm') {
+    body {
+      background-color: red;
+    }
+  }
+  
+  @include breakpoint-max($screen, 'md') {
+    body {
+      background-color: green;
+    }
+  }
+  
+  @include breakpoint-max($screen, 'lg') {
+    body {
+      background-color: yellow;
+    }
+  }
+  
+  @include breakpoint-max($screen, 'xl') {
+    body {
+      background-color: orange;
+    }
+  }
