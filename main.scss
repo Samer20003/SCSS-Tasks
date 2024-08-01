@@ -93,6 +93,7 @@ $sizes:(
   }
 
 
+<<<<<<< HEAD
     }
     
   }
@@ -112,3 +113,41 @@ $sizes:(
 }
 
 
+=======
+  $screen: (
+    'sm': 599,
+    'md': 725,
+    'lg': 992,
+    'xl': 1200,
+);
+
+
+@include breakpoint-max($screen, 'sm') {
+body{
+    background-color: red;
+}
+
+}
+
+@include breakpoint-max($screen, 'md') {
+body{
+    background-color: green;
+}
+
+}
+
+@include breakpoint-max($screen, 'lg') {
+body{
+    background-color: blue;
+}
+
+}
+
+@include breakpoint-max($screen, 'xl') {
+body{
+    background-color: yellow;
+}
+}
+       
+  
+>>>>>>> samer_branch
