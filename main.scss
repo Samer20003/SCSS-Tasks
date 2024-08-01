@@ -92,6 +92,8 @@ $sizes:(
     }
   }
 
+
+
   $screen: (
         'sm': 599,
         'md': 725,
@@ -99,9 +101,32 @@ $sizes:(
         'xl': 1200,
   );
 
-@each $type , $value in $screen{
-    .#{$type}{
-        @include breakpoint-max($value);
-    }
-}
 
+  @include breakpoint-max($screen, 'sm') {
+    body{
+        background-color: red;
+    }
+   
+  }
+
+  @include breakpoint-max($screen, 'md') {
+    body{
+        background-color: green;
+    }
+   
+  }
+
+  @include breakpoint-max($screen, 'lg') {
+    body{
+        background-color: blue;
+    }
+    
+  }
+
+  @include breakpoint-max($screen, 'xl') {
+    body{
+        background-color: yellow;
+    }
+  }
+           
+      

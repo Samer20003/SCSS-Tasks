@@ -468,26 +468,23 @@ body {
   padding-bottom: 5px;
 }
 
-@media (max-width: 599px) {
-  .sm {
+@media (max-width: 599) {
+  body {
     background-color: red;
   }
 }
-
-@media (max-width: 725px) {
-  .md {
-    background-color: red;
+@media (max-width: 725) {
+  body {
+    background-color: green;
   }
 }
-
-@media (max-width: 992px) {
-  .lg {
-    background-color: red;
+@media (max-width: 992) {
+  body {
+    background-color: blue;
   }
 }
-
-@media (max-width: 1200px) {
-  .xl {
-    background-color: red;
+@media (max-width: 1200) {
+  body {
+    background-color: yellow;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -1,6 +1,14 @@
-@mixin breakpoint-max($size){
-    @media (max-width: #{$size}px)
-    {
-        background-color: red;
+
+
+@mixin breakpoint-max($screen,$key){
+    $size: map-get($screen , $key);
+
+    @if $size{
+        @media (max-width:$size){
+            @content;
+        }
+    } @else {
+        @error ("Invalid size")
     }
+
 }
