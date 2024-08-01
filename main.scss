@@ -21,6 +21,72 @@ $colors:(
 
 @each $name ,$color in $colors{
     .bg-#{$name}{
-        background-color:$color
+        background-color:$color;
+        color:$color;
     }
 }
+
+$MP:(
+    'ml':'margin-left',
+    'mr':'margin-right',
+    'mt':'margin-top',
+    'mb':'margin-bottom',
+    'pl':'padding-left',
+    'pr':'padding-right',
+    'pt':'padding-top',
+    'pb':'padding-bottom',
+    'mh': (
+        'margin-left',
+        'margin-right'
+    ),
+    'mv': (
+        'margin-top',
+        'margin-bottom'
+    ),
+    'ma':(
+        'margin-left',
+        'margin-right',
+        'margin-top',
+        'margin-bottom'
+    ),
+    'ph': (
+        'padding-left',
+        'padding-right'
+    ),
+    'pv': (
+        'padding-top',
+        'padding-bottom'
+    ),
+    'pa': (
+        'padding-left',
+        'padding-right',
+        'padding-top',
+        'padding-bottom')
+
+    
+);
+
+$sizes:(
+    'xxl':30px,
+    'xl':25px,
+    'lg':20px,
+    'md':15px,
+    'sm':10px,
+    'xs':5px,
+);
+
+
+@each $direction, $val in $MP {
+    @each $type, $value in $sizes {
+      .#{$direction}-#{$type} {
+        @if type-of($val) == 'list' {
+          @each $property in $val {
+            #{$property}: $value;
+          }
+        } @else {
+          #{$val}: $value;
+        }
+      }
+    }
+  }
+
