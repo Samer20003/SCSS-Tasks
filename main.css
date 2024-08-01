@@ -1,0 +1,59 @@
+body {
+  background-color: cadetblue;
+}
+
+.bg-primary {
+  background-color: blue;
+}
+
+.bg-secondary {
+  background-color: green;
+}
+
+.bg-gray100 {
+  background-color: #f7fafc;
+}
+
+.bg-gray200 {
+  background-color: #edf2f7;
+}
+
+.bg-gray300 {
+  background-color: #e2e8f0;
+}
+
+.bg-gray400 {
+  background-color: #cbd5e0;
+}
+
+.bg-gray500 {
+  background-color: #a0aec0;
+}
+
+.bg-gray600 {
+  background-color: #718096;
+}
+
+.bg-gray700 {
+  background-color: #4a5568;
+}
+
+.bg-gray800 {
+  background-color: #2d3748;
+}
+
+.bg-gray900 {
+  background-color: #1a202c;
+}
+
+.bg-Error {
+  background-color: red;
+}
+
+.bg-Success {
+  background-color: olive;
+}
+
+.bg-Warning {
+  background-color: orange;
+}/*# sourceMappingURL=main.css.map */
