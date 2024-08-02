@@ -1,0 +1,14 @@
+@use '../variables/variables' as vars;
+@each $direction, $val in vars.$MP {
+    @each $type, $value in vars.$sizes {
+      .#{$direction}-#{$type} {
+        @if type-of($val) == 'list' {
+          @each $property in $val {
+            #{$property}: $value;
+          }
+        } @else {
+          #{$val}: $value;
+        }
+      }
+    }
+  }

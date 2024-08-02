@@ -1,5 +1,7 @@
-@mixin breakpoint-max($screen,$key){
-    $size: map-get($screen, $key );
+@use '../variables/variables' as vars;
+
+@mixin breakpoint-max($key){
+    $size: map-get(vars.$screen, $key );
     @if $size{
         @media (max-width:$size){
             @content;

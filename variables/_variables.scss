@@ -1,19 +1,35 @@
-$colors:(
-    'primary':blue,
-    'secondary':green,
-    'gray100':#f7fafc,
-    'gray200':#edf2f7,
-    'gray300':#e2e8f0,
-    'gray400':#cbd5e0,
-    'gray500':#a0aec0,
-    'gray600':#718096,
-    'gray700':#4a5568,
-    'gray800':#2d3748,
-    'gray900':#1a202c,
-    'Error': red,
-    'Success': olive,
-    'Warning': orange,
+$primary: blue;
+$secondary: green;
+$gray100: #f7fafc;
+$gray200: #edf2f7;
+$gray300: #e2e8f0;
+$gray400: #cbd5e0;
+$gray500: #a0aec0;
+$gray600: #718096;
+$gray700: #4a5568;
+$gray800: #2d3748;
+$gray900: #1a202c;
+$error: red;
+$success: olive;
+$warning: orange;
+
+$colors: (
+    'primary': $primary,
+    'secondary': $secondary,
+    'gray100': $gray100,
+    'gray200': $gray200,
+    'gray300': $gray300,
+    'gray400': $gray400,
+    'gray500': $gray500,
+    'gray600': $gray600,
+    'gray700': $gray700,
+    'gray800': $gray800,
+    'gray900': $gray900,
+    'error': $error,
+    'success': $success,
+    'warning': $warning,
 );
+
 $MP:(
     'ml':'margin-left',
     'mr':'margin-right',

@@ -1,0 +1,9 @@
+@use '../variables/variables' as vars;
+@each $name ,$color in vars.$colors{
+    .bg-#{$name}{
+        background-color:$color;
+    }
+    .text-color-#{$name}{
+        color: $color;
+    }
+}

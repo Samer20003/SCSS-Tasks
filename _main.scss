@@ -1,54 +1,30 @@
-@use './helpers/mixnes' as *;
-@use './variables/variables' as *;
+@use './variables/variables' as vars;
+@use './helpers/mixnes' as mix;
+@use './helpers/colors' as colors;
+@use './helpers/spacess' as spacess;
 body{
-    background-color: cadetblue;
+    background-color: vars.$error;
 }
 
-
-
-@each $name ,$color in $colors{
-    .bg-#{$name}{
-        background-color:$color;
-        color:$color;
-    }
-}
-
-
-
-
-@each $direction, $val in $MP {
-    @each $type, $value in $sizes {
-      .#{$direction}-#{$type} {
-        @if type-of($val) == 'list' {
-          @each $property in $val {
-            #{$property}: $value;
-          }
-        } @else {
-          #{$val}: $value;
-        }
-      }
-    }
-  }
-   
-  @include breakpoint-max($screen, 'sm') {
+  @include mix.breakpoint-max('sm') {
     body {
       background-color: red;
     }
   }
   
-  @include breakpoint-max($screen, 'md') {
+  @include mix.breakpoint-max('md') {
     body {
       background-color: green;
     }
   }
   
-  @include breakpoint-max($screen, 'lg') {
+  @include mix.breakpoint-max('lg') {
     body {
       background-color: yellow;
     }
   }
   
-  @include breakpoint-max($screen, 'xl') {
+  @include mix.breakpoint-max('xl') {
     body {
       background-color: orange;
     }
