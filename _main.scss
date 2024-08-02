@@ -2,9 +2,9 @@
 @use './helpers/mixnes' as mix;
 @use './helpers/colors' as colors;
 @use './helpers/spacess' as spacess;
-body{
-    background-color: vars.$error;
-}
+@use './helpers/shadow' as shadow;
+@use './helpers/colorChanges' as colorChanges;
+
 
   @include mix.breakpoint-max('sm') {
     body {
@@ -27,5 +27,26 @@ body{
   @include mix.breakpoint-max('xl') {
     body {
       background-color: orange;
+    }
+  }
+
+  .elemnt{
+
+   box-shadow:shadow.makeShadoe(vars.$primary);
+  }
+
+  .btn{
+    padding: 5px 10px;
+    font-size: 16px;
+    border: none;
+    font-weight: 100;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .8);
+    cursor: pointer;
+    
+  }
+  @each $name,$color in vars.$colors{
+    .btn-#{$name}{ // btn-primary
+        background-color: $color;
+        color: colorChanges.get-text-color($color);
     }
   }
